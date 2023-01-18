@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Лаборатории</title>
+    <link rel="stylesheet" href="/css/laboratory.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/homePage">Home</a>
+    <a class="right">8 (912) 727-70-73</a>
+    <a href="/login" class="right">Личный кабинет</a>
+    <a href="/laboratory" class="right">Работа лабороторий</a>
+    <a href="/doctor" class="right">Наши врачи</a>
+</div>
+
+<div class="form_auth_block">
+    <div class="form_auth_block_content">
+        <p font-size="120 px">Записаться на прием </p>
+        <form class="form_auth_style"  action="/laboratory"  method="POST">
+            <p><select name="list1">
+                <option value="1" selected>Выбирите специальность</option>
+                <option value="1" name="type_analysis">Хирург</option>
+                <option value="2" name="type_analysis">Лор</option>
+                <option value="3" name="type_analysis">Терапевт</option>
+                <option value="5" name="type_analysis">Травмотолог</option>
+            </select></p>
+            <a>   <p><input type="submit" value="Посмотреть расписание"></p>  <p><input type="reset" value="Очистить форму"></p> </a>
+
+            <a class="fixedButton" href>
+                <div class="roundedFixedBtn"><i class="fa fa-phone"> Вызвать скорую</i></div>
+            </a>
+
+        </form>
+    </div>
+</div>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+
+
+
+<div>
+<table class="alert alert-info mt-2 users">
+    <thead>
+    <th>ID</th>
+    <th>Type_analysis</th>
+    <th>Time_start</th>
+    <th>Time_end</th>
+    <th>Price</th>
+    </thead>
+    <div th:each ="el : ${allLab}">
+        <tr>
+            <td th:text="${el.id}"></td>
+            <td th:text="${el.type_analysis}"></td>
+            <td>
+                <div th:each="scheduleLabsId : ${el.scheduleLabsId}"><span th:text="${scheduleLabsId.startTime}"></span></div>
+            </td>
+            <td>
+                <div th:each="scheduleLabsId : ${el.scheduleLabsId}"><span th:text="${scheduleLabsId.endTime}"></span></div>
+            </td>
+            <td th:text="${el.price}"></td>
+
+
+        </tr>
+    </div>
+</table>
+</div>
+</body>
+</html>

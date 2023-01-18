@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Requests</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="header">
+    <div id="navigation-container">
+        <ul class="hr">
+            <li><a href="/">Home</a></li>
+            <li sec:authorize="hasRole('ROLE_DOCTOR')"><a href="/claim_request">Прием регистрации</a></li>
+            <li sec:authorize="hasRole('ROLE_USER')"><a href="/send_request">Send Request</a></li>
+            <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/admin">Админ панель</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="main">
+
+    <table class="alert alert-info mt-2 requests">
+        <thead>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Почта</th>
+        <th>Телефон</th>
+        <th>Никнейм</th>
+        </thead>
+
+        <div th:each ="rq : ${allRequest}">
+            <tr>
+                <td th:time="${rq.first_name}"></td>
+                <td th:text="${rq.last_name}"></td>
+                <td th:text="${rq.email}"></td>
+                <td th:text="${rq.phone}"></td>
+                <td th:text="${rq.username}"></td>
+                <td>
+                    <form action="/claim_request" method="post">
+                        <input type="hidden" name="requestId" th:value="${rq.id}"/>
+                        <input type="hidden" name="action" th:value="accept"/>
+                        <button type="submit" class="btn btn-danger del">Принять</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/claim_request" method="post">
+                        <input type="hidden" name="requestId" th:value="${rq.id}"/>
+                        <input type="hidden" name="action" th:value="reject"/>
+                        <button type="submit" class="btn btn-danger del">Отклонить</button>
+                    </form>
+                </td>
+            </tr>
+        </div>
+    </table>
+
+</div>
+</body>
+</html>

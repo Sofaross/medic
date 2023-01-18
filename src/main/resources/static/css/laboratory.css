@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+    font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    font-size: 140%;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px 24px;
+    text-decoration: none;
+}
+.navbar li {
+    font-size: 140%;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px 24px;
+    text-decoration: none;
+}
+.navbar li.right {
+    font-size: 140%;
+    float: right;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+    font-size: 140%;
+    float: right;
+}
+.navbar a.rightLo {
+    font-size: 70%;
+    float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.form_auth_block{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background-size: cover;
+    border-radius: 4px;
+}
+.form_auth_block_content{
+    padding-top: 15%;
+}
+.form_auth_block_head_text{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    background: rgb(255, 255, 255);
+    opacity: 0.7;
+}
+.form_auth_block_text{
+    display: block;
+    text-align: center;
+    padding: 13px;
+    padding-left: 55px;
+    font-size: 12px;
+    font-weight: 600;
+    background: rgb(255, 255, 255);
+    opacity: 0.7;
+    float: left;
+}
+
+.form_auth_block1_text{
+    display: block;
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 600;
+    background: rgb(255, 255, 255);
+    opacity: 0.7;
+    float: center;
+}
+
+.form_auth_text{
+    display: block;
+    text-align: center;
+    padding: 0 13px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    background: rgb(255, 255, 255);
+    opacity: 0.7;
+    float: center;
+}
+
+
+.form_auth_block input{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 45px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    outline: none;
+
+}
+input:focus {
+    color: #000000;
+    border-radius: 10px;
+    border: 2px solid #436fea;
+}
+.form_auth_button{
+
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 25px 0 25px;
+    margin: 40px 80px 15px 30px;
+    outline: none;
+    border: 1px solid #6c757d;
+    border-radius: 26px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #6c757d;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+
+}
+.btn:focus {
+    box-shadow: 0 0 0 3px rgb(108 117 125 / 50%);
+}
+.btn:hover {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+.btn:active {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+.btn:disabled {
+    pointer-events: none;
+    opacity: 0.65;
+}
+::-webkit-input-placeholder {color:#3f3f44; padding-left: 10px;}
+::-moz-placeholder          {color:#3f3f44; padding-left: 10px;}
+:-moz-placeholder           {color:#3f3f44; padding-left: 10px;}
+:-ms-input-placeholder      {color:#3f3f44; padding-left: 10px;}
+
+select {
+    width: 500px; /* Ширина списка в пикселах */
+    height: 50px;
+}
+p {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 120%; /* Размер шрифта в пунктах */
+}
+
+.fixedButton{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    padding: 20px;
+}
+.roundedFixedBtn{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 25px 0 25px;
+    margin: 40px 80px 15px 30px;
+    outline: none;
+    border: 1px solid #6c757d;
+    border-radius: 26px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #6c757d;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+}
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+    font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    font-size: 140%;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px 24px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    font-size: 140%;
+    float: right;
+}
+.navbar a.rightLo {
+    font-size: 70%;
+    float: right;
+}
+
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.fixedButton{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    padding: 20px;
+}
+.roundedFixedBtn{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 25px 0 25px;
+    margin: 40px 80px 15px 30px;
+    outline: none;
+    border: 1px solid #6c757d;
+    border-radius: 26px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #6c757d;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+}
+
+
+/* Слайдер: */
+.slider{
+    max-width: 90%;
+    /* Положение элемента устанавливается относительно его исходной позиции: */
+    position: relative;
+    /* Центрируем по горизонтали: */
+    margin: auto;
+    height: 350px;
+}
+
+/* Картинка масштабируется по отношению к родительскому элементу: */
+.slider .item img {
+    /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+    opacity: 0.6;
+}
+
+/* Кнопки назад и вперёд: */
+.slider .previous, .slider .next {
+    /* Добавляет курсору иконку, когда тот оказывается над кнопкой: */
+    cursor: pointer;
+    /* Положение элемента задаётся относительно границ браузера: */
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    /* Оформление самих кнопок: */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    /* Плавное появление фона при наведении курсора: */
+    transition: 0.6s ease;
+    /* Скругление границ: */
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* При наведении курсора на кнопки добавляем фон кнопок: */
+.slider .previous:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Анимация слайдов: */
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    position: relative;
+    text-align: center;
+    color: white;
+
+}
+.slider .item span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+@keyframes fade {
+    /* Устанавливаем и изменяем степень прозрачности: */
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.form_auth_block{
+    width: 500px;
+    height: 200px;
+    margin: 0 auto;
+    background-size: cover;
+    border-radius: 4px;
+}
+.form_auth_block_content{
+    padding-top: 15%;
+}
+p {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 170%; /* Размер шрифта в пунктах */
+}
+
+.sposs{
+    max-width: 90%;
+    /* Положение элемента устанавливается относительно его исходной позиции: */
+    position: relative;
+    /* Центрируем по горизонтали: */
+    margin: auto;
+    height: 350px;
+}
+
+
+
+.header {
+    width: auto;
+    border-radius: 5px;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+    border: 1px solid #a8ffd2;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    -webkit-text-stroke: 1px purple;
+}
+
+.main {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    margin: 0.5% auto;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+    border: 1px solid #a8ffd2;
+}
+
+.users {
+    border: 3px solid white;
+    border-collapse: collapse;
+    margin: auto;
+    color: #3a014f;
+}
+
+.users TD, TH {
+    padding: 5px; /* Поля вокруг текста */
+    border: 3px solid white; /* Рамка вокруг ячеек */
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    display:inline-block;
+    vertical-align:top;
+    float: right;
+}
+
+ul.hr {
+    margin: 0; /* Обнуляем значение отступов */
+    margin-top: 10px;
+    padding: 4px; /* Значение полей */
+}
+ul.hr li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    padding: 3px; /* Поля вокруг текста */
+}
+
+.del {
+    width: 100px;
+    height: 25px;
+    text-decoration: none;
+    padding-top: 2px;
+    color: #a675b3;
+    text-align: center;
+    line-height: 20px;
+    display: block;
+    margin: 20px auto;
+    font: normal 13px arial;
+    border-radius: 5px;
+}
+
+.del:not(.active) {
+    box-shadow: inset 0 1px 1px rgba(111, 55, 125, 0.8), inset 0 -1px 0px rgba(63, 59, 113, 0.2), 0 9px 16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
+    background-image: linear-gradient(#3b2751, #271739);
+    text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 -1px 0 #311d47;
+}
+
+.del:not(.active):hover,
+.del:not(.active):focus {
+    transition: color 200ms linear, text-shadow 500ms linear;
+    color: #fff;
+    text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c;
+}
+.del:not(:hover) {
+    transition: 0.6s;
+}
+
+.logo{
+    margin-top: 0.4%;
+    margin-left: 1%;
+    display:inline-block;
+}
+
+#blablabla {
+    display: none;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
+
+#blablabla.open {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.adminregister {
+    width: 100%;
+    text-align: center;
+}
+
+label {
+    text-decoration: none;
+    color: white;
+    -webkit-text-stroke: 1px purple;
+}
+
+input {
+    border-radius: 5px;
+    border: 2px solid #a8ffd2;
+    height: 35px;
+    width: 300px;
+    font-family: 'Abel', sans-serif;
+    outline:none;
+}
+
+form {
+    display: inline-block;
+}
+
+input:focus {
+    transform: translateX(-5px);
+    border-radius: 5px;
+}

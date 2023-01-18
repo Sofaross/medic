@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Домик</title>
+    <link rel="stylesheet" href="/css/homePage.css">
+    <script defer src="/js/homePage.js"></script>
+</head>
+<body>
+
+<div class="navbar">
+    <ul class="navbar" >
+        <a href="/">Дом</a>
+
+        <a class="right" href="/logout">Выход</a>
+<!--        <a href="/record" class="right">Запись на прием</a>-->
+<!--        <a href="/laboratory" class="right">Работа лабороторий</a>-->
+<!--        <a href="/doctors" class="right">Наши врачи</a>-->
+        <li sec:authorize="hasRole('ROLE_DOCTOR')">
+            <a class="right" href="/claim_request">Прием регистрации</a></li>
+        <li sec:authorize="hasRole('ROLE_USER')">
+            <a class="right" href="/send_request">Запись на прием</a>
+            <a class="right">8 (912) 727-70-73</a>
+        </li>
+        <li sec:authorize="hasRole('ROLE_ADMIN')">
+            <a  class="right" href="/claim_request">Прием регистрации</a>
+            <a  class="right" href="/admin">Админ панель</a>
+        </li>
+    </ul>
+</div>
+<br>
+<br>
+<a class="fixedButton" href>
+    <div  class="roundedFixedBtn"><i class="fa fa-phone"> Вызвать скорую</i></div>
+</a>
+
+<!-- Основной блок слайдера -->
+<div class="slider">
+
+    <!-- Первый слайд -->
+    <div class="item">
+        <img src="/pictures/1.png">
+    </div>
+
+    <!-- Второй слайд -->
+    <div class="item">
+        <img src="/pictures/2.jpg">
+        <span>Лучшие койки Питера</span>
+    </div>
+
+    <!-- Третий слайд -->
+    <div class="item">
+        <img src="/pictures/3.jpg">
+    </div>
+
+    <!-- Третий слайд -->
+    <div class="item">
+        <img src="/pictures/4.jpg">
+    </div>
+
+    <!-- Кнопки-стрелочки -->
+    <a class="previous" onclick="previousSlide()">&#10094;</a>
+    <a class="next" onclick="nextSlide()">&#10095;</a>
+</div>
+<!--<div class="form_auth_block">-->
+<!--    <div class="form_auth_block_content">-->
+<!--        <p font-size="120 px" >Нам доверяю более 12 часов</p>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="sposs">-->
+<!--    <a><img src="/pictures/SS.jpg"   width="550" height="480" align="top" />  А что писать ?-->
+<!--</div></as>-->
+<!--</div>-->
+
+
+</body>
+</html>

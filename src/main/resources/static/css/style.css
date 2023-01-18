@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+body {
+    background-color:white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    font-family: 'Vibur', cursive;
+/*   the main font */
+    font-family: 'Abel', sans-serif;
+    opacity: .95;
+}
+
+.header {
+    width: auto;
+    border-radius: 5px;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-color: #8b00ff;
+    border: 1px solid white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    -webkit-text-stroke: 1px purple;
+}
+
+.main {
+        width: auto;
+        height: auto;
+        border-radius: 5px;
+        margin: 0.5% auto;
+        box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+        padding: 2%;
+        background-color: #8b00ff;
+        border: 1px solid white;
+}
+
+
+ul {
+list-style-type: none;
+}
+
+.header ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    display:inline-block;
+    vertical-align:top;
+    float: right;
+}
+
+ul.hr {
+    margin: 0; /* Обнуляем значение отступов */
+    margin-top: 10px;
+    padding: 4px; /* Значение полей */
+   }
+ul.hr li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    padding: 3px; /* Поля вокруг текста */
+}
+
+.logo{
+    margin-top: 0.4%;
+    margin-left: 1%;
+    display:inline-block;
+}
